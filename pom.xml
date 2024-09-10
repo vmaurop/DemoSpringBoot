@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.luv2code.springboot.demo</groupId>
-	<artifactId>mycollapp</artifactId>
+	<artifactId>mycoolapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mycollapp</name>
+	<name>mycoolapp</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
