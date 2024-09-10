@@ -67,9 +67,16 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
+<!--		/health is still available, when access /actuator/beans spring security will prompt for login-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
+<!--		mvn spring-boot:run-->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
