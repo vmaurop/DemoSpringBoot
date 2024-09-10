@@ -15,9 +15,14 @@ public class FunRestController {
 
     @GetMapping("/")
     public String sayHello() {
-        teamName = teamName + 1;
         return "Hello World:";
     }
+
+    @GetMapping("/teaminfo")
+    public String getTeamInfo() {
+        return "Coach: "+coachName+", Team name "+ teamName;
+    }
+
 
     @GetMapping("/workout")
     public String getDailyWorkout() {
