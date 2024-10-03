@@ -68,10 +68,10 @@
 		</dependency>
 
 <!--		/health is still available, when access /actuator/beans spring security will prompt for login-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-security</artifactId>-->
+<!--		</dependency>-->
 
 	</dependencies>
 
