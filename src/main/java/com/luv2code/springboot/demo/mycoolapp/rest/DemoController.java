@@ -13,6 +13,20 @@ public class DemoController {
     // define a private filed for the dependency
     private Coach myCoach;
 
+    private Coach otherCoach;
+
+    private Coach otherCoach1;
+
+
+    @Autowired
+    public void DemoController(@Qualifier("footballCoach") Coach theCoach, @Qualifier("basketBallCoach") Coach theOtherCoach
+    , @Qualifier("cricketCoach") Coach theOtherCoach1) {
+        myCoach = theCoach;
+        otherCoach = theOtherCoach;
+        otherCoach1 = theOtherCoach1;
+    }
+
+
     //field injection
 //    @Autowired @Qualifier("basketballCoach")
 //    private Coach obrandovic;
@@ -23,17 +37,23 @@ public class DemoController {
 //        this.myCoach = myCoach;
 //    }
 
-    //setter injection
+  //  setter injection
     @Autowired
     public void setCoach(@Qualifier("basketBallCoach") Coach theCoach) {
-        this.myCoach = theCoach;
+        myCoach = theCoach;
     }
 
 
 
     @GetMapping("/dailyworkout")
     public String getDailyWorkout() {
-        return myCoach.getDailyWorkout();
+        return myCoach.isolation();
+    }
+
+
+    @GetMapping("/check")   // default singleton instance
+    public String getCheckBeansScope() {
+        return "Comparing the default scope is Singleton of beans, " + (myCoach == otherCoach)+ " Prototype scope: "+ (myCoach == otherCoach1);
     }
 
 //    @GetMapping("/pickandroll")
